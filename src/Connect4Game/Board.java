@@ -15,6 +15,11 @@ public class Board {
     public void makeBackEndMove(boolean who, int col) {
         int rowNum = getRowNumber(col);
         board[rowNum][col] = who == Player.RED_PLAYER ? Cell.RED : Cell.YELLOW;
+
+        Cell color = board[rowNum][col];
+        if (isWinConfiguration(color, rowNum, col)) {
+            System.out.println("We have a winner!");
+        }
     }
 
     public int getRowNumber(int col) {
@@ -37,4 +42,158 @@ public class Board {
         }
         return retVal;
     }
+
+    private boolean isWinConfiguration(Cell color, int row, int col) {
+        boolean isWin = false;
+       /* if ( checkHorizontal(color, row) || checkVertical(color, col)
+                || checkDiagonalUp(color, row, col) || checkDiagonalDown(color, row, col) ) {
+            isWin = true;
+        }*/
+        if ( checkHorizontal(color, row)) {
+            isWin = true;
+            System.out.println("horizontal winner");
+        }
+        else if (checkVertical(color, col) ) {
+            isWin = true;
+            System.out.println("vertical winner");
+        }
+        else if (checkDiagonalUp(color, row, col) ) {
+            isWin = true;
+            System.out.println("diag UP winner");
+        }
+        else if (checkDiagonalDown(color, row, col) ) {
+            isWin = true;
+            System.out.println("diag DOWN winner");
+        }
+        return isWin;
+    }
+
+    private boolean checkHorizontal(Cell color, int row) {
+        boolean isWin = false;
+        int counter = 0;
+
+        for (int col = 0; col < Connect4Frame.NR_COL; col++) {
+           if (board[row][col] == color) {
+                counter++;
+                if (counter == 4) {
+                    isWin = true;
+                    break;
+                }
+            }
+           else {
+                counter = 0;
+            }
+        }
+        return isWin;
+    }
+
+    private boolean checkVertical(Cell color, int col) {
+        boolean isWin = false;
+        int counter = 0;
+
+        for (int row = 0; row < Connect4Frame.NR_ROW; row++) {
+            if (board[row][col] == color) {
+                counter++;
+                if (counter == 4) {
+                    isWin = true;
+                    break;
+                }
+            }
+            else {
+                counter = 0;
+            }
+        }
+        return isWin;
+    }
+
+    private boolean checkDiagonalUp(Cell color, int rowNum, int col) {
+        boolean isWin = false;
+        int counter = 0;
+
+        int subtract = (Connect4Frame.NR_ROW - 1) - rowNum;
+
+        if (col - subtract >= 0) {
+            col -= subtract;
+
+        for (int row = Connect4Frame.NR_ROW - 1; row >= 0; row--) {
+            if (board[row][col] == color) {
+                counter++;
+                if (counter == 4) {
+                    isWin = true;
+                    break;
+                }
+            } else {
+                counter = 0;
+            }
+            // when row = 6, then we're asking this to b3 7, which is not allowed;
+            if (col < 6) {
+                col++;
+            }
+        }
+        }
+        return isWin;
+    }
+
+    private boolean checkDiagonalDown(Cell color, int rowNum, int colNum) {
+        boolean isWin = false;
+        int counter = 0;
+
+        if (rowNum <= colNum) {
+            int subtract = rowNum;
+            colNum -= subtract;
+            rowNum = 0;
+        } else if (colNum < rowNum) {
+            int subtract = colNum;
+            rowNum -= subtract;
+        }
+
+
+        for (int col = colNum; col < Connect4Frame.NR_COL; col++) {
+            if (board[rowNum][col] == color) {
+                counter++;
+                if (counter == 4) {
+                    isWin = true;
+                    break;
+                }
+            } else {
+                counter = 0;
+            }
+        }
+            return isWin;
+        }
+
+  /*  private boolean checkDiagonalDown(Cell color, int rowNum, int colNum) {
+        boolean isWin = false;
+        int counter = 0;
+
+      *//*  int add = rowNum;
+        if (col - add >= 0) {
+            col -= add;
+        }*//*
+        // to get to col 0
+        int subtract = colNum;
+        if (rowNum - subtract >= 0) {
+            rowNum -= subtract;
+        }
+
+            //get to row 0
+            for (int col = colNum; col < Connect4Frame.NR_COL; col++) {
+                if (board[rowNum][col] == color) {
+                    counter++;
+                    if (counter == 4) {
+                        isWin = true;
+                        break;
+                    }
+                } else {
+                    counter = 0;
+                }
+                if (rowNum < 5) {
+                    rowNum++;
+                }
+                else {
+                    break;
+                }
+            }
+        return isWin;
+    }*/
 }

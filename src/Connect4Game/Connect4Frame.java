@@ -1,8 +1,10 @@
 package Connect4Game;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.ArrayList;
 
 import static Connect4Game.Connect4Component.SQUARE_SIZE;
 import static Connect4Game.Connect4Component.BORDER_SPACE;
@@ -67,9 +69,11 @@ public class Connect4Frame extends JFrame implements MouseListener {
             connect4Component.board2.makeBackEndMove(who, col);
 
             //change graphic image
-            makeGraphicMove(who, row, col);
-            }
+            connect4Component.pieces.add(new Point(row, col));
+            repaint();
+
         }
+    }
 
     public int getColNumber(int x_coord) {
         int col = 0;
@@ -98,10 +102,6 @@ public class Connect4Frame extends JFrame implements MouseListener {
         return col;
     }
 
-    public void makeGraphicMove(boolean who, int y_start, int x_start) {
-        connect4Component.drawCirclePiece(who, y_start, x_start);
-    }
-
     @Override
     public void mousePressed(MouseEvent e) {
     }
@@ -118,4 +118,3 @@ public class Connect4Frame extends JFrame implements MouseListener {
     public void mouseExited(MouseEvent e) {
     }
 }
-
