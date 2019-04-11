@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.util.ArrayList;
 
 import static Connect4Game.Connect4Component.SQUARE_SIZE;
 import static Connect4Game.Connect4Component.BORDER_SPACE;
@@ -62,7 +61,6 @@ public class Connect4Frame extends JFrame implements MouseListener {
 
             mouseClickCounter++;
             Boolean who = getPlayer(mouseClickCounter);
-
             int row = connect4Component.board2.getRowNumber(col);
 
             //change cell status
@@ -71,7 +69,6 @@ public class Connect4Frame extends JFrame implements MouseListener {
             //change graphic image
             connect4Component.pieces.add(new Point(row, col));
             repaint();
-
         }
     }
 

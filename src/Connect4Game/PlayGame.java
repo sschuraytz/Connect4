@@ -7,6 +7,7 @@ public class PlayGame {
         Connect4Frame connect4Frame= new Connect4Frame();
         connect4Frame.setVisible(true);
 
+
         //TODO - #1
         // create methods that check for winner (vertical, horizontal, diagonal)
         // if (winner) - end game and say who won

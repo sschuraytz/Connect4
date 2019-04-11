@@ -19,16 +19,20 @@ public class Connect4Component extends JComponent {
 
         drawBoard(graphics);
 
+
         boolean who;
 
         for (Point piece : pieces) {
             if (pieces.indexOf(piece) % 2 == 0) {
                 who = Player.RED_PLAYER;
-            }
-            else {
+            } else {
                 who = Player.YELLOW_PLAYER;
             }
-           drawCirclePiece(graphics, who, piece.x, piece.y);
+            drawCirclePiece(graphics, who, piece.x, piece.y);
+
+            if (pieces.indexOf(piece) == pieces.size()) {
+
+            }
         }
     }
 
@@ -47,6 +51,7 @@ public class Connect4Component extends JComponent {
     }
 
     public void drawCirclePiece(Graphics graphics, boolean who, int row, int col) {
+
         if (who == Player.RED_PLAYER) {
             graphics.setColor(Color.RED);
         }
@@ -58,15 +63,4 @@ public class Connect4Component extends JComponent {
                 SQUARE_SIZE - BORDER_SPACE /2,
                 SQUARE_SIZE - BORDER_SPACE /2);
     }
-
-
-
-    // Option A: have red circle in one corner, and a yellow circle in other corner.
-    // When your turn, click your circle and click your column. Have it drop down that column
-    // have onClickListener
-    // when click, start gradual repainting - // ask him if we're not supposed to use that or if it's ok
-    public void movePiece(Graphics graphics) {
-        //add animation here
-    }
-
 }

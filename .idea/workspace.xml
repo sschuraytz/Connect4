@@ -10,21 +10,10 @@
       <change beforePath="$PROJECT_DIR$/out/production/Connect4/Connect4Game/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Connect4/Connect4Game/Board.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Connect4/Connect4Game/Connect4Component.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Connect4/Connect4Game/Connect4Component.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Connect4/Connect4Game/Connect4Frame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Connect4/Connect4Game/Connect4Frame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Connect4/Connect4Game/PlayGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Connect4/Connect4Game/PlayGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Connect4/Original/AlphaBeta.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Connect4/Original/Board$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Connect4/Original/Board.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Connect4/Original/Cell.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Connect4/Original/Connect4Component$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Connect4/Original/Connect4Component.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Connect4/Original/Connect4Frame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Connect4/Original/Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Connect4/Original/Program.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Connect4/Original/Trace.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Connect4/Original/UserInput.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Connect4Game/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Connect4Game/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Connect4Game/Connect4Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Connect4Game/Connect4Component.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Connect4Game/Connect4Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Connect4Game/Connect4Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Connect4Game/PlayGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Connect4Game/PlayGame.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,14 +27,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Connect4Game/Connect4Frame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="170">
+              <caret line="70" column="22" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Connect4Game/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -53,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Connect4Game/Connect4Component.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+            <state relative-caret-position="1037">
+              <caret line="61" column="55" lean-forward="true" selection-start-line="61" selection-start-column="55" selection-end-line="61" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -62,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Connect4Game/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2057">
-              <caret line="121" column="33" lean-forward="true" selection-start-line="121" selection-start-column="33" selection-end-line="121" selection-end-column="33" />
+            <state relative-caret-position="2626">
+              <caret line="202" column="5" selection-start-line="202" selection-start-column="5" selection-end-line="202" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -74,8 +72,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Connect4Game/PlayGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -130,18 +128,18 @@
         <option value="$PROJECT_DIR$/src/Connect4Game/Cell.java" />
         <option value="$PROJECT_DIR$/src/Original/Program.java" />
         <option value="$PROJECT_DIR$/src/Connect4Game/Player.java" />
+        <option value="$PROJECT_DIR$/../schuraytz-mco152-2019/src/main/java/schuraytz/net/YahooHomepage.java" />
         <option value="$PROJECT_DIR$/src/Connect4Game/PlayGame.java" />
+        <option value="$PROJECT_DIR$/src/Connect4Game/Board.java" />
         <option value="$PROJECT_DIR$/src/Connect4Game/Connect4Component.java" />
         <option value="$PROJECT_DIR$/src/Connect4Game/Connect4Frame.java" />
-        <option value="$PROJECT_DIR$/src/Connect4Game/Board.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-6" />
-    <option name="y" value="57" />
-    <option name="width" value="975" />
-    <option name="height" value="1020" />
+    <option name="x" value="-33" />
+    <option name="width" value="1016" />
+    <option name="height" value="1031" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -149,6 +147,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -171,38 +170,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Connect4" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Connect4" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="Connect4" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Connect4" type="616d4139:PackageViewModuleNode" />
-              <item name="Connect4Game" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="Connect4" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Connect4" type="616d4139:PackageViewModuleNode" />
-              <item name="Original" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="Connect4" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Connect4" type="616d4139:PackageViewModuleNode" />
-              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -249,9 +223,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="YahooHomepage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="schuraytz.net.YahooHomepage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="schuraytz.net.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.PlayGame" />
+        <item itemvalue="Application.YahooHomepage" />
         <item itemvalue="Application.Program" />
       </list>
     </recent_temporary>
@@ -287,16 +274,16 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.15546559" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.10769231" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.3285968" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="2" weight="0.1687389" />
+      <window_info anchor="bottom" id="Messages" order="2" weight="0.1651865" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.3268206" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.26465365" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.21314387" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.22380106" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.35675675" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" weight="0.3285968" />
@@ -343,20 +330,6 @@
     <entry file="file://$PROJECT_DIR$/src/Original/Board.java" />
     <entry file="file://$PROJECT_DIR$/src/Original/Connect4Component.java" />
     <entry file="file://$PROJECT_DIR$/src/Original/Connect4Frame.java" />
-    <entry file="file://$PROJECT_DIR$/src/Connect4Game/Cell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Connect4Game/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/java/awt/Component.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6732">
@@ -392,37 +365,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Connect4Game/PlayGame.java">
+    <entry file="file://$PROJECT_DIR$/../schuraytz-mco152-2019/src/main/java/schuraytz/net/YahooHomepage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Connect4Game/Connect4Component.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        <state relative-caret-position="228">
+          <caret line="18" column="61" lean-forward="true" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Connect4Game/Connect4Frame.java">
+    <entry file="file://$PROJECT_DIR$/src/Connect4Game/Cell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Connect4Game/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2057">
-          <caret line="121" column="33" lean-forward="true" selection-start-line="121" selection-start-column="33" selection-end-line="121" selection-end-column="33" />
+        <state relative-caret-position="2626">
+          <caret line="202" column="5" selection-start-line="202" selection-start-column="5" selection-end-line="202" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Connect4Game/PlayGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Connect4Game/Connect4Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="61" column="55" lean-forward="true" selection-start-line="61" selection-start-column="55" selection-end-line="61" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Connect4Game/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Connect4Game/Connect4Frame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="70" column="22" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
