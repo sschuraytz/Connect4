@@ -19,7 +19,6 @@ public class Connect4Component extends JComponent {
 
         drawBoard(graphics);
 
-
         boolean who;
 
         for (Point piece : pieces) {
@@ -31,26 +30,33 @@ public class Connect4Component extends JComponent {
             drawCirclePiece(graphics, who, piece.x, piece.y);
 
             if (pieces.indexOf(piece) == pieces.size()) {
-
             }
         }
     }
 
     public void drawBoard(Graphics graphics) {
+        // in case of window resize
+        int newBorder = (getWidth() - (SQUARE_SIZE * Connect4Frame.NR_COL));
+
         graphics.setColor(Color.BLUE.darker());
-        graphics.fill3DRect(BORDER_SPACE /2, BORDER_SPACE /2 + SQUARE_SIZE, width + BORDER_SPACE /2,
-                height + BORDER_SPACE /2, true);
+        graphics.fill3DRect(newBorder/2 - 7,
+                            BORDER_SPACE /2,
+                            width + BORDER_SPACE /2,
+                            height + BORDER_SPACE /2, true);
 
         graphics.setColor(Color.BLACK);
-        for (int row = 1; row < Connect4Frame.NR_ROW + 1; row++) {
+        for (int row = 0; row < Connect4Frame.NR_ROW; row++) {
             for (int col = 0; col < Connect4Frame.NR_COL; col++) {
-                graphics.fillOval(BORDER_SPACE + col * SQUARE_SIZE, BORDER_SPACE + row * SQUARE_SIZE,
-                        SQUARE_SIZE - BORDER_SPACE /2, SQUARE_SIZE - BORDER_SPACE /2);
+                graphics.fillOval(newBorder/2 + col * SQUARE_SIZE + 7,
+                                BORDER_SPACE + row * SQUARE_SIZE,
+                                SQUARE_SIZE - BORDER_SPACE /2,
+                                SQUARE_SIZE - BORDER_SPACE /2);
             }
         }
     }
 
     public void drawCirclePiece(Graphics graphics, boolean who, int row, int col) {
+        int BorderSpaceNew = (getWidth() - (SQUARE_SIZE * Connect4Frame.NR_COL));
 
         if (who == Player.RED_PLAYER) {
             graphics.setColor(Color.RED);
@@ -58,9 +64,9 @@ public class Connect4Component extends JComponent {
         else {
             graphics.setColor(Color.YELLOW);
         }
-        graphics.fillOval(col * SQUARE_SIZE + BORDER_SPACE,
-                (row + 1) * SQUARE_SIZE + BORDER_SPACE,
-                SQUARE_SIZE - BORDER_SPACE /2,
-                SQUARE_SIZE - BORDER_SPACE /2);
+        graphics.fillOval(col * SQUARE_SIZE + BorderSpaceNew/2 + 7,
+                        (row) * SQUARE_SIZE + BORDER_SPACE,
+                        SQUARE_SIZE - BORDER_SPACE /2,
+                        SQUARE_SIZE - BORDER_SPACE /2);
     }
 }

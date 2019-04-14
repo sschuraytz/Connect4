@@ -1,5 +1,7 @@
 package Connect4Game;
 
+import javax.swing.*;
+
 public class Board {
 
     public Cell[][] board = new Cell[Connect4Frame.NR_ROW][Connect4Frame.NR_COL];
@@ -12,13 +14,13 @@ public class Board {
         }
     }
 
-    public void makeBackEndMove(boolean who, int col) {
+    public void makeBackEndMove(boolean who, int col, JLabel winLabel) {
         int rowNum = getRowNumber(col);
         board[rowNum][col] = who == Player.RED_PLAYER ? Cell.RED : Cell.YELLOW;
 
         Cell color = board[rowNum][col];
         if (isWinConfiguration(color, rowNum, col)) {
-            System.out.println("We have a winner!");
+            winLabel.setText("\nPLAYER " + color + " WINS!");
         }
     }
 
@@ -45,22 +47,9 @@ public class Board {
 
     private boolean isWinConfiguration(Cell color, int row, int col) {
         boolean isWin = false;
-       /* if ( checkHorizontal(color, row) || checkVertical(color, col)
+        if ( checkHorizontal(color, row) || checkVertical(color, col)
                 || checkDiagonalUp(color, row, col) || checkDiagonalDown(color, row, col) ) {
             isWin = true;
-        }*/
-        if (checkHorizontal(color, row)) {
-            isWin = true;
-            System.out.println("horizontal winner");
-        } else if (checkVertical(color, col)) {
-            isWin = true;
-            System.out.println("vertical winner");
-        } else if (checkDiagonalUp(color, row, col)) {
-            isWin = true;
-            System.out.println("diag UP winner");
-        } else if (checkDiagonalDown(color, row, col)) {
-            isWin = true;
-            System.out.println("diag DOWN winner");
         }
         return isWin;
     }
@@ -108,7 +97,6 @@ public class Board {
         int add = (Connect4Frame.NR_ROW - 1) - rowNum;
         if (colNum - add >= 0) {
             colNum -= add;
-
 
             for (int row = Connect4Frame.NR_ROW - 1; row >= 0; row--) {
                 if (board[row][colNum] == color) {
