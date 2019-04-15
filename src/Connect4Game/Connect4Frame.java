@@ -1,42 +1,67 @@
 package Connect4Game;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 import static Connect4Game.Connect4Component.SQUARE_SIZE;
-import static Connect4Game.Connect4Component.BORDER_SPACE;
 
 public class Connect4Frame extends JFrame implements MouseListener {
 
     int mouseClickCounter = 0;
     private Connect4Component connect4Component = new Connect4Component();
+    private JLabel welcome = new JLabel("Connect 4 Instructions");
+    private JLabel instructions = new JLabel("Be the first player to get four pieces in a row horizontally, vertically or diagonally.");
+    private JLabel winnerLabel = new JLabel( " ");
 
     static final int NR_ROW = 6;
     static final int NR_COL = 7;
-    int col1_end = BORDER_SPACE /2 + 1 * SQUARE_SIZE;
-    int col2_end = BORDER_SPACE /2 + 2 * SQUARE_SIZE;
-    int col3_end = BORDER_SPACE /2 + 3 * SQUARE_SIZE;
-    int col4_end = BORDER_SPACE /2 + 4 * SQUARE_SIZE;
-    int col5_end = BORDER_SPACE /2 + 5 * SQUARE_SIZE;
-    int col6_end = BORDER_SPACE /2 + 6 * SQUARE_SIZE;
-    int col7_end = BORDER_SPACE /2 + 7 * SQUARE_SIZE;
+    
 
     public Connect4Frame() {
         setTitle("Connect 4");
-        setSize(NR_ROW * 110, (NR_COL + 1) * 110);
+        setSize(NR_ROW * 105, (NR_COL + 1) * 110);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         JPanel root = new JPanel();
-        root.setLayout(new BoxLayout(root, BoxLayout.LINE_AXIS));
+        root.setLayout(new BoxLayout(root, BoxLayout.Y_AXIS));
 
-        for (int row = 0; row < NR_ROW; row++) {
-            for (int col = 0; col < NR_COL; col++) {
-                root.add(connect4Component);
-            }
-        }
+        JPanel labels = new JPanel();
+        labels.setLayout(new BoxLayout(labels, BoxLayout.PAGE_AXIS));
+        designHeader(labels);
+        root.add(labels);
+
+        JPanel board = new JPanel();
+        board.setLayout(new BoxLayout(board, BoxLayout.LINE_AXIS));
+        designBoard(board);
+        root.add(board);
+
         setContentPane(root);
         root.addMouseListener(this);
+    }
+
+    public void designHeader(JPanel labels) {
+        welcome.setFont(new Font("", Font.BOLD, 24));
+        welcome.setForeground(Color.BLUE);
+        welcome.setAlignmentX(Component.CENTER_ALIGNMENT);
+        labels.add(welcome);
+
+        instructions.setAlignmentX(Component.CENTER_ALIGNMENT);
+        labels.add(instructions);
+
+        winnerLabel.setFont(new Font("",  Font.PLAIN, 24));
+        winnerLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        labels.add(winnerLabel);
+
+    }
+
+    public void designBoard(JPanel board) {
+        for (int row = 0; row < NR_ROW; row++) {
+            for (int col = 0; col < NR_COL; col++) {
+                board.add(connect4Component);
+            }
+        }
     }
 
     public Boolean getPlayer(int mouseClickCounter) {
@@ -60,18 +85,29 @@ public class Connect4Frame extends JFrame implements MouseListener {
 
             mouseClickCounter++;
             Boolean who = getPlayer(mouseClickCounter);
-
             int row = connect4Component.board2.getRowNumber(col);
 
             //change cell status
-            connect4Component.board2.makeBackEndMove(who, col);
+            connect4Component.board2.makeBackEndMove(who, col, winnerLabel);
 
             //change graphic image
-            makeGraphicMove(who, row, col);
-            }
+            connect4Component.pieces.add(new Point(row, col));
+            repaint();
         }
+    }
 
     public int getColNumber(int x_coord) {
+
+        int newBorder = getWidth() - (SQUARE_SIZE * NR_COL);
+        int col1_end = newBorder /2 + 1 * SQUARE_SIZE;
+        int col2_end = newBorder /2 + 2 * SQUARE_SIZE;
+        int col3_end = newBorder /2 + 3 * SQUARE_SIZE;
+        int col4_end = newBorder /2 + 4 * SQUARE_SIZE;
+        int col5_end = newBorder /2 + 5 * SQUARE_SIZE;
+        int col6_end = newBorder /2 + 6 * SQUARE_SIZE;
+        int col7_end = newBorder /2 + 7 * SQUARE_SIZE;
+
+
         int col = 0;
 
         if (x_coord < col1_end) {
@@ -98,10 +134,6 @@ public class Connect4Frame extends JFrame implements MouseListener {
         return col;
     }
 
-    public void makeGraphicMove(boolean who, int y_start, int x_start) {
-        connect4Component.drawCirclePiece(who, y_start, x_start);
-    }
-
     @Override
     public void mousePressed(MouseEvent e) {
     }
@@ -118,4 +150,3 @@ public class Connect4Frame extends JFrame implements MouseListener {
     public void mouseExited(MouseEvent e) {
     }
 }
-
